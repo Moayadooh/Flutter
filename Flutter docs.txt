@@ -15,3 +15,6 @@ used to allocate value once in the memory to optimize the application (no need t
 
 code format:
 >format
+
+private class type start with "_"
+
