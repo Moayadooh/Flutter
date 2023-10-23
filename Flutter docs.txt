@@ -18,3 +18,5 @@ code format:
 
 private class type start with "_"
 
+"StatelessWidget" used for static user interface
+"StatefulWidget" used for dynamic user interface
