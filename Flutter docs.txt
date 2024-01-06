@@ -1,5 +1,4 @@
 
-
 create flutter app:
 flutter create app_name
 
@@ -21,5 +20,10 @@ private class type start with "_"
 "StatelessWidget" used for static user interface
 "StatefulWidget" used for dynamic user interface
 
-revise "70. Mapping Lists & Using the Spread Operator":
-...
+foreach in dart:
+...objectName.List<object>.map((item){})
+shuffled
+
+Third pary package (Google Fonts):
+https://pub.dev/packages/google_fonts
+https://docs.flutter.dev/cookbook/design/fonts
