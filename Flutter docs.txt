@@ -27,3 +27,5 @@ shuffled
 Third pary package (Google Fonts):
 https://pub.dev/packages/google_fonts
 https://docs.flutter.dev/cookbook/design/fonts
+
+'widget' is a key word to access properties of the extended class. It is an instance of that class.
