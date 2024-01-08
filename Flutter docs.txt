@@ -29,3 +29,5 @@ https://pub.dev/packages/google_fonts
 https://docs.flutter.dev/cookbook/design/fonts
 
 'widget' is a key word to access properties of the extended class. It is an instance of that class.
+
+'Map<String, Object>' is a key and value data type like a dictionary
