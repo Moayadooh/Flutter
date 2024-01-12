@@ -15,7 +15,7 @@ used to allocate value once in the memory to optimize the application (no need t
 code format:
 >format
 
-private class type start with "_"
+private class or data type start with "_"
 
 "StatelessWidget" used for static user interface
 "StatefulWidget" used for dynamic user interface
@@ -24,6 +24,12 @@ foreach in dart:
 ...objectName.List<object>.map((item){})
 shuffled
 
+Flutter Docs:
+https://docs.flutter.dev/
+
+Button Style:
+https://api.flutter.dev/flutter/material/ButtonStyle-class.html
+
 Third pary package (Google Fonts):
 https://pub.dev/packages/google_fonts
 https://docs.flutter.dev/cookbook/design/fonts
@@ -31,3 +37,10 @@ https://docs.flutter.dev/cookbook/design/fonts
 'widget' is a key word to access properties of the extended class. It is an instance of that class.
 
 'Map<String, Object>' is a key and value data type like a dictionary
+
+'myValue' is data type act as method
+int get myValue {
+	return 1;
+}
+
+var x = myValue;
