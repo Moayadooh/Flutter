@@ -44,3 +44,7 @@ int get myValue {
 }
 
 var x = myValue;
+
+UUID:
+https://pub.dev/packages/uuid
+flutter pub add uuid
