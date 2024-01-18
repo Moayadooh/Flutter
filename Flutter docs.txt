@@ -15,6 +15,8 @@ used to allocate value once in the memory to optimize the application (no need t
 code format:
 >format
 
+
+
 private class or data type start with "_"
 
 "StatelessWidget" used for static user interface
@@ -23,16 +25,6 @@ private class or data type start with "_"
 foreach in dart:
 ...objectName.List<object>.map((item){})
 shuffled
-
-Flutter Docs:
-https://docs.flutter.dev/
-
-Button Style:
-https://api.flutter.dev/flutter/material/ButtonStyle-class.html
-
-Third pary package (Google Fonts):
-https://pub.dev/packages/google_fonts
-https://docs.flutter.dev/cookbook/design/fonts
 
 'widget' is a key word to access properties of the extended class. It is an instance of that class.
 
@@ -45,6 +37,23 @@ int get myValue {
 
 var x = myValue;
 
+
+
+Flutter Docs:
+https://docs.flutter.dev/
+
+Button Style:
+https://api.flutter.dev/flutter/material/ButtonStyle-class.html
+
+Third pary package (Google Fonts):
+https://pub.dev/packages/google_fonts
+https://docs.flutter.dev/cookbook/design/fonts
+flutter pub add google_fonts
+
 UUID:
 https://pub.dev/packages/uuid
 flutter pub add uuid
+
+intl:
+https://pub.dev/packages/intl
+flutter pub add intl
