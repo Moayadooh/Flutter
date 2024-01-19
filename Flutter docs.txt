@@ -37,6 +37,14 @@ int get myValue {
 
 var x = myValue;
 
+'Spacer()' --> similar to margin-right: auto;
+'const SizedBox(height: 16),' --> similar to margin-top and margin-bottom
+
+'showDialog()' --> show a modal
+'Navigator.pop(ctx);' --> close the modal
+
+value! --> exclamation mark mean value will not be null
+
 
 
 Flutter Docs:
