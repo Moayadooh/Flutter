@@ -31,6 +31,7 @@ class _ExpensesState extends State<Expenses> {
 
   void _openAddExpenseOverlay() {
     showModalBottomSheet(
+      useSafeArea: true, //open modal under the camera
       isScrollControlled: true, //modal take full screen height
       context: context,
       builder: (ctx) => NewExpense(onAddExpense: _addExpense),
@@ -68,6 +69,8 @@ class _ExpensesState extends State<Expenses> {
 
   @override
   Widget build(BuildContext context) {
+    final width = MediaQuery.of(context).size.width;
+
     Widget mainContent = const Center(
       child: Text('No expenses found. Start adding some!'),
     );
@@ -81,6 +84,7 @@ class _ExpensesState extends State<Expenses> {
 
     return Scaffold(
       appBar: AppBar(
+        //centerTitle: false,//disable default center title position on IOS
         title: const Text('Flutter ExpenseTracker'),
         actions: [
           IconButton(
@@ -89,15 +93,27 @@ class _ExpensesState extends State<Expenses> {
           ),
         ],
       ),
-      body: Column(
-        children: [
-          //const Text('The chart'),
-          Chart(expenses: _registredExpenses),
-          Expanded(
-            child: mainContent,
-          )
-        ],
-      ),
+      body: width < 600
+          ? Column(
+              children: [
+                //const Text('The chart'),
+                Chart(expenses: _registredExpenses),
+                Expanded(
+                  child: mainContent,
+                )
+              ],
+            )
+          : Row(
+              children: [
+                Expanded(
+                  //using Expanded to fix issue of infinity width of Row and Chart
+                  child: Chart(expenses: _registredExpenses),
+                ),
+                Expanded(
+                  child: mainContent,
+                )
+              ],
+            ),
     );
   }
 }

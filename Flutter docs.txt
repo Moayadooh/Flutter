@@ -37,9 +37,6 @@ int get myValue {
 
 var x = myValue;
 
-'Spacer()' --> similar to margin-right: auto;
-'const SizedBox(height: 16),' --> similar to margin-top and margin-bottom
-
 'showDialog()' --> show a modal
 'Navigator.pop(ctx);' --> close the modal
 
@@ -65,3 +62,27 @@ flutter pub add uuid
 intl:
 https://pub.dev/packages/intl
 flutter pub add intl
+
+
+
+'Spacer()' --> similar to margin-right: auto;
+'const SizedBox(height: 16),' --> similar to margin-top and margin-bottom
+'const SizedBox(width: 16),' --> similar to margin-right and margin-left
+
+Lecture 136
+Column Constraints:
+height --> as much as possible
+width --> as much as needed by children
+
+Row Constraints:
+vice versa of Column
+
+Scaffold Constraints:
+height --> max device height
+width --> max device width
+
+Expanded Constraints:
+take only available width and height
+
+TextField Constraints:
+width --> as much as possible
