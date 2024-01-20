@@ -86,3 +86,11 @@ take only available width and height
 
 TextField Constraints:
 width --> as much as possible
+
+
+MediaQuery vs LayoutBuilder
+
+
+Flutter Internals Project:
+try to make the statefulWidget as small as possible to improve the performance of the device.
+because for each UI update will call Build method.
