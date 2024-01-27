@@ -1,0 +1,23 @@
+
+When develop Flutter app in the begining, either start with 'StatelessWidget' or use 'MaterialApp' wrapper in 'build' method
+
+MaterialApp
+
+Container
+
+Scaffold Constraints:
+height --> max device height
+width --> max device width
+
+Expanded Constraints:
+take only available width and height
+
+Column Constraints:
+height --> as much as possible
+width --> as much as needed by children
+
+Row Constraints:
+vice versa of Column
+
+TextField Constraints:
+width --> as much as possible
