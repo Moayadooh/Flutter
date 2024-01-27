@@ -88,7 +88,9 @@ TextField Constraints:
 width --> as much as possible
 
 
-MediaQuery vs LayoutBuilder
+MediaQuery vs LayoutBuilder:
+The main difference between Media Query and Layout Builder is that Media Query is based on the full context of the screen rather than just the size of a particular widget; 
+on the other hand, Layout Builder determines the maximum width and height of a specific widget only.
 
 
 Flutter Internals Project:
