@@ -1,0 +1,46 @@
+
+//- Main Method
+void main() {
+  runApp(
+    const MaterialApp(
+      home: MyClass(),
+    ),
+  );
+}
+
+//- Stateful Widget
+class MyClass extends StatefulWidget {
+  const MyClass({super.key});
+
+  @override
+  //State<StatefulWidget> createState() {
+  State<MyClass> createState() {
+    return _MyClass();
+  }
+}
+
+class _MyClass extends State<MyClass> {
+	@override
+	Widget build(BuildContext context) {
+		return Scaffold(
+		  body: ...
+		);
+	}
+}
+
+//- Dialog
+showDialog(
+  context: context,
+  builder: (ctx) => AlertDialog(
+	title: const Text('Dialog Title'),
+	content: Text(_titleController.text),
+	actions: [
+	  TextButton(
+		onPressed: () {
+		  Navigator.pop(ctx);
+		},
+		child: const Text('Done'),
+	  )
+	],
+  ),
+);
