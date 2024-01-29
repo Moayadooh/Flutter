@@ -1,26 +1,23 @@
 
-When develop Flutter app in the begining, either start with 'StatelessWidget' or use 'MaterialApp' wrapper in 'build' method
+Scaffold(
+  body: ...
+);
 
-MaterialApp
-provides a default implementation of Material Design.
+Padding(
+  padding: const EdgeInsets.all(8.0),
+  child: ...,
+),
 
-Scaffold
-height --> max device height
-width --> max device width
+Column(
+  mainAxisAlignment: MainAxisAlignment.center,
+  crossAxisAlignment: CrossAxisAlignment.center,
+  children: [
+	const Spacer(),
+  ],
+),
 
-Container
-Use a Container when you want to add padding, margins, borders, or background color, to name some of its capabilities.
+SizedBox(width: 16, height: 16),
 
-Expanded
-take only available width and height
-
-Column
-height --> as much as possible
-width --> as much as needed by children
-
-Row
-height --> as much as needed by children
-width --> as much as possible
-
-TextField
-width --> as much as possible
+Container(
+  alignment: Alignment.center,
+),

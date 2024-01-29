@@ -28,6 +28,29 @@ class _MyClass extends State<MyClass> {
 	}
 }
 
+//- Text Field
+final _titleController = TextEditingController();
+
+@override
+void dispose() {
+  _titleController.dispose();
+  super.dispose();
+}
+
+TextField(
+  controller: _titleController,
+  maxLength: 50,
+  decoration: const InputDecoration(
+	label: Text('Title'),
+  ),
+),
+
+//- Elevated Button
+ElevatedButton(
+  onPressed: () {},
+  child: const Text('Save Expense'),
+),
+
 //- Dialog
 showDialog(
   context: context,

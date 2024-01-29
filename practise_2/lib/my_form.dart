@@ -44,12 +44,22 @@ class _MyForm extends State<MyForm> {
         padding: const EdgeInsets.all(8.0),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            TextField(
-              controller: _titleController,
-              maxLength: 50,
-              decoration: const InputDecoration(
-                label: Text('Title'),
+            Expanded(
+              child: Container(
+                height: double.infinity,
+                alignment: Alignment.topCenter,
+                child: SizedBox(
+                  width: 300,
+                  child: TextField(
+                    controller: _titleController,
+                    maxLength: 50,
+                    decoration: const InputDecoration(
+                      label: Text('Title'),
+                    ),
+                  ),
+                ),
               ),
             ),
             ElevatedButton(
