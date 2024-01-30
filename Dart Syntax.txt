@@ -1,0 +1,16 @@
+
+//- class
+class Mobile {
+  Mobile(this.name);
+  final String name;
+}
+
+//- list
+List<Mobile> mobiles = [];
+mobiles.add(Mobile("Samsung"));
+
+//- for
+String list = "";
+for (final item in mobiles) {
+  list += item.name;
+}

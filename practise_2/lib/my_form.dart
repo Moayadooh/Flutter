@@ -11,66 +11,32 @@ class MyForm extends StatefulWidget {
 }
 
 class _MyForm extends State<MyForm> {
-  final _titleController = TextEditingController();
-
-  void _showDialog() {
-    showDialog(
-      context: context,
-      builder: (ctx) => AlertDialog(
-        title: const Text('Dialog Title'),
-        content: Text(_titleController.text),
-        actions: [
-          TextButton(
-            onPressed: () {
-              Navigator.pop(ctx);
-            },
-            child: const Text('Done'),
-          )
-        ],
-      ),
-    );
-  }
-
-  @override
-  void dispose() {
-    _titleController.dispose();
-    super.dispose();
-  }
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Padding(
-        padding: const EdgeInsets.all(8.0),
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: [
-            Expanded(
-              child: Container(
-                height: double.infinity,
-                alignment: Alignment.topCenter,
-                child: SizedBox(
-                  width: 300,
-                  child: TextField(
-                    controller: _titleController,
-                    maxLength: 50,
-                    decoration: const InputDecoration(
-                      label: Text('Title'),
-                    ),
-                  ),
+      body: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        crossAxisAlignment: CrossAxisAlignment.center,
+        children: [
+          Expanded(
+            child: ListView.builder(
+              itemCount: 3,
+              itemBuilder: (ctx, index) => Dismissible(
+                background: Container(
+                  color: Theme.of(context).colorScheme.error.withOpacity(0.75),
+                  // margin: EdgeInsets.symmetric(
+                  //   horizontal: Theme.of(context).cardTheme.margin!.horizontal,
+                  // ),
                 ),
+                key: const ValueKey(""),
+                child: const Center(
+                  child: Text("List Item"),
+                ),
+                onDismissed: (direction) {},
               ),
             ),
-            ElevatedButton(
-              onPressed: () {
-                //print(_titleController.text);
-                _showDialog();
-              },
-              child: const Text('Save Expense'),
-            ),
-          ],
-        ),
+          ),
+        ],
       ),
     );
   }
