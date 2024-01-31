@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:intl/intl.dart';
 
 class MyForm extends StatefulWidget {
   const MyForm({super.key});
@@ -10,7 +11,25 @@ class MyForm extends StatefulWidget {
   }
 }
 
+final formatter = DateFormat.yMd();
+
 class _MyForm extends State<MyForm> {
+  DateTime? _selectedDate;
+  void _presentDatePicker() async {
+    final now = DateTime.now();
+    final firstDate = DateTime(now.year - 1, now.month, now.day);
+    final pickedDate = await showDatePicker(
+      context: context,
+      initialDate: now,
+      firstDate: firstDate,
+      lastDate: now,
+    ); //.then((value) {
+    //},);
+    setState(() {
+      _selectedDate = pickedDate;
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -18,22 +37,15 @@ class _MyForm extends State<MyForm> {
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
-          Expanded(
-            child: ListView.builder(
-              itemCount: 3,
-              itemBuilder: (ctx, index) => Dismissible(
-                background: Container(
-                  color: Theme.of(context).colorScheme.error.withOpacity(0.75),
-                  // margin: EdgeInsets.symmetric(
-                  //   horizontal: Theme.of(context).cardTheme.margin!.horizontal,
-                  // ),
-                ),
-                key: const ValueKey(""),
-                child: const Center(
-                  child: Text("List Item"),
-                ),
-                onDismissed: (direction) {},
-              ),
+          Text(
+            _selectedDate == null
+                ? 'No date selected'
+                : formatter.format(_selectedDate!),
+          ),
+          IconButton(
+            onPressed: _presentDatePicker,
+            icon: const Icon(
+              Icons.calendar_month,
             ),
           ),
         ],

@@ -1,3 +1,5 @@
+enum Category { food, travel, leisure, work }
+
 class Mobile {
   Mobile(this.name);
 

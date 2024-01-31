@@ -109,7 +109,6 @@ try to make the statefulWidget as small as possible to improve the performance o
 because for each UI update will call Build method.
 
 - Date picker
-- Drop Down and other text fields
 - Card
 - Dark and Light theme
 - Chart
