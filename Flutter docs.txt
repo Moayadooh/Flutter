@@ -5,6 +5,16 @@ flutter create app_name
 run flutter app:
 cd app_name
 flutter run
+flutter run --no-debug
+
+flutter build apk --release
+flutter build ios --release
+flutter build windows --release
+flutter build web --release
+
+flutter build appbundle --release
+appbundle --> used for publish android app only
+
 
 run emulator: (VS Code)
 >flutter: launch emulator
