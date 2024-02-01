@@ -27,7 +27,7 @@ code format:
 
 
 
-private class or data type start with "_"
+private class or private data type start with "_"
 
 "StatelessWidget" used for static user interface
 "StatefulWidget" used for dynamic user interface
@@ -46,9 +46,6 @@ int get myValue {
 }
 
 var x = myValue;
-
-'showDialog()' --> show a modal
-'Navigator.pop(ctx);' --> close the modal
 
 value! --> exclamation mark mean value will not be null
 
@@ -118,7 +115,6 @@ Flutter Internals Project:
 try to make the statefulWidget as small as possible to improve the performance of the device.
 because for each UI update will call Build method.
 
-- Date picker
 - Card
 - Dark and Light theme
 - Chart

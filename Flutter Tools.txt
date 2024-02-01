@@ -88,7 +88,7 @@ showDialog(
 	actions: [
 	  TextButton(
 		onPressed: () {
-		  Navigator.pop(ctx);
+		  Navigator.pop(ctx);//close the modal
 		},
 		child: const Text('Done'),
 	  )
@@ -96,20 +96,37 @@ showDialog(
   ),
 );
 
-//- List View
-ListView.builder(
-  itemCount: 3,
-  itemBuilder: (ctx, index) => const Dismissible(
-	// background: Container(
-	//   color: Theme.of(context).colorScheme.error.withOpacity(0.75),
-	//   margin: EdgeInsets.symmetric(
-	//     horizontal: Theme.of(context).cardTheme.margin!.horizontal,
-	//   ),
-	// ),
-	key: ValueKey(""),
-	child: Center(
-	  child: Text("List Item"),
-	),
-	//onDismissed: (direction) {},
-  ),
+//- Date Picker
+intl:
+https://pub.dev/packages/intl
+flutter pub add intl
+
+final formatter = DateFormat.yMd();
+
+DateTime? _selectedDate;
+  void _presentDatePicker() async {
+    final now = DateTime.now();
+    final firstDate = DateTime(now.year - 1, now.month, now.day);
+    final pickedDate = await showDatePicker(
+      context: context,
+      initialDate: now,
+      firstDate: firstDate,
+      lastDate: now,
+    ); //.then((value) {
+    //},);
+    setState(() {
+      _selectedDate = pickedDate;
+    });
+  }
+
+Text(
+_selectedDate == null
+	? 'No date selected'
+	: formatter.format(_selectedDate!),
+),
+IconButton(
+	onPressed: _presentDatePicker,
+	icon: const Icon(
+	Icons.calendar_month,
+ ),
 ),

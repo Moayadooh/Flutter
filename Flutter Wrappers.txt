@@ -1,13 +1,16 @@
 
+//- Scaffold
 Scaffold(
   body: ...
 );
 
+//- Padding
 Padding(
   padding: const EdgeInsets.all(8.0),
   child: ...,
 ),
 
+//- Column
 Column(
   mainAxisAlignment: MainAxisAlignment.center,
   crossAxisAlignment: CrossAxisAlignment.center,
@@ -16,10 +19,28 @@ Column(
   ],
 ),
 
+//- SizedBox
 SizedBox(width: 16, height: 16),
 
+//- Container
 Container(
   alignment: Alignment.center,
 ),
 
-ListView
+//- List View
+ListView.builder(
+  itemCount: 3,
+  itemBuilder: (ctx, index) => const Dismissible(
+	// background: Container(
+	//   color: Theme.of(context).colorScheme.error.withOpacity(0.75),
+	//   margin: EdgeInsets.symmetric(
+	//     horizontal: Theme.of(context).cardTheme.margin!.horizontal,
+	//   ),
+	// ),
+	key: ValueKey(""),
+	child: Center(
+	  child: Text("List Item"),
+	),
+	//onDismissed: (direction) {},
+  ),
+),
