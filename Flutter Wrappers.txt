@@ -1,8 +1,54 @@
 
-//- Scaffold
+//- Main Method
+void main() {
+  runApp(
+    const MaterialApp(
+      home: MyClass(),
+    ),
+  );
+}
+
+//- Stateful Widget (used for dynamic user interface)
+class MyClass extends StatefulWidget {
+  const MyClass({super.key});
+
+  @override
+  //State<StatefulWidget> createState() {
+  State<MyClass> createState() {
+    return _MyClass();
+  }
+}
+
+class _MyClass extends State<MyClass> {
+	@override
+	Widget build(BuildContext context) {
+		...
+	}
+}
+
+//- Stateless Widget (used for static user interface)
+class MyClass extends StatelessWidget {
+  const MyClass({super.key});
+  @override
+  Widget build(BuildContext context) {
+	...
+  }
+}
+
+//- MaterialApp (provides a default implementation of Material Design)
+MaterialApp(
+  home: ...
+),
+
+//- Scaffold (height --> max device height, width --> max device width)
 Scaffold(
   body: ...
 );
+
+//- Expanded (take only available width and height, fix issue of infinity width or height)
+Expanded(
+  child: ...
+),
 
 //- Padding
 Padding(
@@ -10,19 +56,25 @@ Padding(
   child: ...,
 ),
 
-//- Column
+//- Column (height --> as much as possible, width --> as much as needed by children)
 Column(
   mainAxisAlignment: MainAxisAlignment.center,
   crossAxisAlignment: CrossAxisAlignment.center,
   children: [
-	const Spacer(),
+	...
   ],
 ),
 
 //- SizedBox
 SizedBox(width: 16, height: 16),
 
-//- Container
+const SizedBox(height: 16), --> similar to margin-top and margin-bottom
+const SizedBox(width: 16), --> similar to margin-right and margin-left
+
+//- Spacer
+Spacer(), --> similar to margin-right, margin-left, margin-top, margin-bottom: auto;
+
+//- Container (Use a Container when you want to add padding, margins, borders, or background color, to name some of its capabilities)
 Container(
   alignment: Alignment.center,
 ),
@@ -43,4 +95,9 @@ ListView.builder(
 	),
 	//onDismissed: (direction) {},
   ),
+),
+
+//- Card
+Card(
+  child: ...
 ),

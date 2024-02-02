@@ -27,30 +27,6 @@ code format:
 
 
 
-private class or private data type start with "_"
-
-"StatelessWidget" used for static user interface
-"StatefulWidget" used for dynamic user interface
-
-foreach in dart:
-...objectName.List<object>.map((item){})
-shuffled
-
-'widget' is a key word to access properties of the extended class. It is an instance of that class.
-
-'Map<String, Object>' is a key and value data type like a dictionary
-
-'myValue' is data type act as method
-int get myValue {
-	return 1;
-}
-
-var x = myValue;
-
-value! --> exclamation mark mean value will not be null
-
-
-
 Flutter Docs:
 https://docs.flutter.dev/
 
@@ -72,38 +48,9 @@ flutter pub add intl
 
 
 
-'Spacer()' --> similar to margin-right, margin-left, margin-top, margin-bottom: auto;
-'const SizedBox(height: 16),' --> similar to margin-top and margin-bottom
-'const SizedBox(width: 16),' --> similar to margin-right and margin-left
-
 Lecture 136
 My own note:
 In Flutter, either start with 'StatelessWidget' or use 'MaterialApp' wrapper in 'build' method
-
-MaterialApp:
-provides a default implementation of Material Design.
-
-Scaffold:
-height --> max device height
-width --> max device width
-
-Container:
-Use a Container when you want to add padding, margins, borders, or background color, to name some of its capabilities.
-
-Expanded:
-take only available width and height
-fix issue of infinity width or height
-
-Column:
-height --> as much as possible
-width --> as much as needed by children
-
-Row:
-height --> as much as needed by children
-width --> as much as possible
-
-TextField:
-width --> as much as possible
 
 
 MediaQuery vs LayoutBuilder:
@@ -114,8 +61,3 @@ on the other hand, Layout Builder determines the maximum width and height of a s
 Flutter Internals Project:
 try to make the statefulWidget as small as possible to improve the performance of the device.
 because for each UI update will call Build method.
-
-- Card
-- Dark and Light theme
-- Chart
-- Linq

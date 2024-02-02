@@ -1,33 +1,4 @@
 
-//- Main Method
-void main() {
-  runApp(
-    const MaterialApp(
-      home: MyClass(),
-    ),
-  );
-}
-
-//- Stateful Widget
-class MyClass extends StatefulWidget {
-  const MyClass({super.key});
-
-  @override
-  //State<StatefulWidget> createState() {
-  State<MyClass> createState() {
-    return _MyClass();
-  }
-}
-
-class _MyClass extends State<MyClass> {
-	@override
-	Widget build(BuildContext context) {
-		return Scaffold(
-		  body: ...
-		);
-	}
-}
-
 //- Text Field
 final _titleController = TextEditingController();
 
@@ -130,3 +101,33 @@ IconButton(
 	Icons.calendar_month,
  ),
 ),
+
+//- Icon Button
+IconButton(
+	onPressed: () {},
+	icon: const Icon(
+	Icons.calendar_month,
+ ),
+)
+
+//- Text Button
+TextButton.icon(
+  onPressed: () {},
+  style: TextButton.styleFrom(
+	foregroundColor: Colors.white,
+  ),
+  icon: const Icon(Icons.refresh),
+  label: const Text('text'),
+)
+
+//- Add Images
+Image.asset(
+  'assets/images/img-1.png',
+  width: 200,
+),
+
+# To add assets to your application, add an assets section, like this:
+  assets:
+    - assets/images/img-1.png
+    - assets/images/img-2.png
+    - ...
