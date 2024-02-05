@@ -46,6 +46,10 @@ intl:
 https://pub.dev/packages/intl
 flutter pub add intl
 
+transparent_image:
+https://pub.dev/packages/transparent_image
+dart pub add transparent_image
+
 
 
 Lecture 136
@@ -64,3 +68,5 @@ because for each UI update will call Build method.
 
 
 each screen need to set its own Scaffold widget
+
+
