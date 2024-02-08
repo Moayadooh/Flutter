@@ -70,3 +70,13 @@ because for each UI update will call Build method.
 each screen need to set its own Scaffold widget
 
 
+put screen in top of previous screen (stack technique):
+Navigator.of(context).push
+
+close previous screen and open the new screen only:
+Navigator.of(context).pushReplacement
+
+return data on click back button (Navigator.of(context).pop):
+WillPopScope() --> this is deprecated (see lecture 173)
+
+An Alternative Navigation Pattern (see lecture 177)
