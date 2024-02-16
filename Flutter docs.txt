@@ -50,6 +50,10 @@ transparent_image:
 https://pub.dev/packages/transparent_image
 dart pub add transparent_image
 
+Riverpod (State Management):
+https://riverpod.dev/
+flutter pub add flutter_riverpod
+
 
 
 Lecture 136
