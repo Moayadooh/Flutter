@@ -131,3 +131,28 @@ Image.asset(
     - assets/images/img-1.png
     - assets/images/img-2.png
     - ...
+
+//- State Management(riverpod):
+void main() {
+  runApp(
+    const ProviderScope(
+      child: App(),
+    ),
+  );
+}
+
+final mealsProvider = Provider((ref) {
+  return dummyMeals;
+});
+
+class TabsScreen extends ConsumerStatefulWidget {
+  @override
+  ConsumerState<TabsScreen> createState() {}
+}
+
+class _TabsScreenState extends ConsumerState<TabsScreen> {}
+
+@override
+Widget build(BuildContext context) {
+  final meals = ref.watch(mealsProvider);
+}

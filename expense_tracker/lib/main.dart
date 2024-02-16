@@ -21,7 +21,7 @@ void main() {
       //theme: ThemeData(useMaterial3: true),
       //Dark mode
       darkTheme: ThemeData.dark().copyWith(
-        useMaterial3: true,
+        //useMaterial3: true,
         colorScheme: kDarkColorScheme,
         cardTheme: const CardTheme().copyWith(
           color: kDarkColorScheme.secondaryContainer,
