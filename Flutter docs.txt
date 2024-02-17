@@ -54,6 +54,9 @@ Riverpod (State Management):
 https://riverpod.dev/
 flutter pub add flutter_riverpod
 
+List of state management approaches:
+https://docs.flutter.dev/data-and-backend/state-mgmt/options
+
 
 
 Lecture 136
