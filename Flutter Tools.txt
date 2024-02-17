@@ -132,7 +132,7 @@ Image.asset(
     - assets/images/img-2.png
     - ...
 
-//- State Management(riverpod):
+//- State Management(riverpod - Stateful Widget)
 void main() {
   runApp(
     const ProviderScope(
@@ -156,3 +156,12 @@ class _TabsScreenState extends ConsumerState<TabsScreen> {}
 Widget build(BuildContext context) {
   final meals = ref.watch(mealsProvider);
 }
+
+//- State Management(riverpod Notifier - Stateless Widget)
+class MealDetailsScreen extends ConsumerWidget {
+
+Widget build(BuildContext context, WidgetRef ref) {
+
+final wasAdded = ref
+                  .read(favoriteMealsProvider.notifier)
+                  .toggleMealFavoriteStatus(meal);
