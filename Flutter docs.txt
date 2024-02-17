@@ -57,6 +57,9 @@ flutter pub add flutter_riverpod
 List of state management approaches:
 https://docs.flutter.dev/data-and-backend/state-mgmt/options
 
+Animation and motion widgets:
+https://docs.flutter.dev/ui/widgets/animation
+
 
 
 Lecture 136
@@ -87,3 +90,5 @@ return data on click back button (Navigator.of(context).pop):
 WillPopScope() --> this is deprecated (see lecture 173)
 
 An Alternative Navigation Pattern (see lecture 177)
+
+late --> asign variable without initializ
