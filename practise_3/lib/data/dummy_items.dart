@@ -2,7 +2,7 @@ import 'package:practise_3/models/grocery_item.dart';
 import 'package:practise_3/data/categories.dart';
 import 'package:practise_3/models/category.dart';
 
-const groceryItems = [
+final groceryItems = [
   GroceryItem(
       id: 'a',
       name: 'Milk',
