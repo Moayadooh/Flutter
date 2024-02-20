@@ -1,5 +1,4 @@
-import 'package:flutter/material.dart';
-import 'package:practise_3/models/category.dart';
+import 'package:shopping_list/models/category.dart';
 
 class GroceryItem {
   const GroceryItem({
@@ -13,8 +12,4 @@ class GroceryItem {
   final String name;
   final int quantity;
   final Category category;
-
-  Color get color {
-    return category.color;
-  }
 }

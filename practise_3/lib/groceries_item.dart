@@ -16,13 +16,13 @@ class GroceriesItem extends StatelessWidget {
             width: 20,
             height: 20,
             child: DecoratedBox(
-              decoration: BoxDecoration(color: groceryItem.itemColor),
+              decoration: BoxDecoration(color: groceryItem.color),
             ),
           ),
           const SizedBox(width: 32),
-          Text(groceryItem.itemName),
+          Text(groceryItem.name),
           const Spacer(),
-          Text(groceryItem.itemQuantity.toString()),
+          Text(groceryItem.quantity.toString()),
         ],
       ),
     );

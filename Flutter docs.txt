@@ -92,3 +92,5 @@ WillPopScope() --> this is deprecated (see lecture 173)
 An Alternative Navigation Pattern (see lecture 177)
 
 late --> asign variable without initializ
+
+StatelessWidget does not have a context object
