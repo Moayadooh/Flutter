@@ -30,6 +30,9 @@ code format:
 Flutter Docs:
 https://docs.flutter.dev/
 
+Flutter Upgrade:
+https://docs.flutter.dev/release/upgrade
+
 Button Style:
 https://api.flutter.dev/flutter/material/ButtonStyle-class.html
 
