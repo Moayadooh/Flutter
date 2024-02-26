@@ -63,6 +63,12 @@ https://docs.flutter.dev/data-and-backend/state-mgmt/options
 Animation and motion widgets:
 https://docs.flutter.dev/ui/widgets/animation
 
+Firebase Database REST API:
+https://firebase.google.com/docs/reference/rest/database
+
+http:
+https://pub.dev/packages/http
+
 
 
 Lecture 136
