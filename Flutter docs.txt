@@ -105,3 +105,13 @@ late --> asign variable without initializ
 StatelessWidget does not have a context object
 
 when to use "FutureBuilder" class? Lecture 234 - 17:33
+
+Start building Flutter iOS apps on macOS:
+https://docs.flutter.dev/get-started/install/macos/mobile-ios?tab=physical#attach
+
+Build Flutter app in release mode for iOS:
+https://stackoverflow.com/questions/49530673/build-flutter-app-in-release-mode-for-ios
+
+error while build iOS app in Xcode : Sandbox: rsync.samba (13105) deny(1) file-write-create, Flutter failed to write to a file:
+https://stackoverflow.com/questions/76590131/error-while-build-ios-app-in-xcode-sandbox-rsync-samba-13105-deny1-file-w
+
