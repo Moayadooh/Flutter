@@ -103,3 +103,5 @@ An Alternative Navigation Pattern (see lecture 177)
 late --> asign variable without initializ
 
 StatelessWidget does not have a context object
+
+when to use "FutureBuilder" class? Lecture 234 - 17:33
