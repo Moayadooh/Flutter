@@ -8,6 +8,7 @@ flutter run
 flutter run --no-debug
 
 flutter build apk --release
+flutter build ios
 flutter build ios --release
 flutter build windows --release
 flutter build web --release
@@ -114,4 +115,3 @@ https://stackoverflow.com/questions/49530673/build-flutter-app-in-release-mode-f
 
 error while build iOS app in Xcode : Sandbox: rsync.samba (13105) deny(1) file-write-create, Flutter failed to write to a file:
 https://stackoverflow.com/questions/76590131/error-while-build-ios-app-in-xcode-sandbox-rsync-samba-13105-deny1-file-w
-
