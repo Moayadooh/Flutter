@@ -31,7 +31,7 @@ class _NewItemState extends State<NewItem> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Add a new item'),
+        title: const Text('Add new place'),
       ),
       body: Padding(
         padding: const EdgeInsets.all(12),
@@ -41,6 +41,7 @@ class _NewItemState extends State<NewItem> {
             children: [
               TextFormField(
                 maxLength: 50,
+                style: const TextStyle(color: Colors.white),
                 decoration: const InputDecoration(
                   label: Text('Name'),
                 ),
@@ -59,12 +60,12 @@ class _NewItemState extends State<NewItem> {
               ),
               const SizedBox(height: 12),
               Row(
-                mainAxisAlignment: MainAxisAlignment.end,
+                mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  ElevatedButton(
-                    //ternary expression. disable btn if return null
+                  ElevatedButton.icon(
                     onPressed: _saveItem,
-                    child: const Text('Add Item'),
+                    icon: const Icon(Icons.add),
+                    label: const Text(' Add Place'),
                   ),
                 ],
               ),

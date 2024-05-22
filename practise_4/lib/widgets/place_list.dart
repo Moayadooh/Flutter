@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:practise_4/models/place.dart';
 import 'package:practise_4/providers/places_provider.dart';
+import 'package:practise_4/widgets/new_item.dart';
 
 class PlaceList extends ConsumerStatefulWidget {
   const PlaceList({super.key});
@@ -11,6 +12,22 @@ class PlaceList extends ConsumerStatefulWidget {
 }
 
 class _PlaceListState extends ConsumerState<PlaceList> {
+  final List<Place> _places = [];
+  void _addItem() async {
+    final newItem = await Navigator.of(context).push<Place>(
+      MaterialPageRoute(
+        builder: (ctx) => const NewItem(),
+      ),
+    );
+
+    if (newItem == null) {
+      return;
+    }
+
+    setState(() {
+      _places.add(newItem);
+    });
+  }
   /* List<Place> _addItem(List<Place> places, String name) {
     places.add(Place(name: name));
     return places;
@@ -31,14 +48,13 @@ class _PlaceListState extends ConsumerState<PlaceList> {
     );
 
     //final places = ref.watch(pleasesProvider);
-    List<Place> places = [];
-    places.add(const Place(name: "Muayad"));
-    places.add(const Place(name: "Yaseen"));
-    if (places.isNotEmpty) {
+    //_places.add(const Place(name: "Muayad"));
+    //_places.add(const Place(name: "Yaseen"));
+    if (_places.isNotEmpty) {
       content = ListView.builder(
-        itemCount: places.length,
+        itemCount: _places.length,
         itemBuilder: (ctx, index) => ListTile(
-          title: Text(places[index].name),
+          title: Text(_places[index].name),
         ),
       );
     }
@@ -48,7 +64,7 @@ class _PlaceListState extends ConsumerState<PlaceList> {
         title: const Text('Your Places'),
         actions: [
           IconButton(
-            onPressed: () {}, //_addItem(places, ""),
+            onPressed: _addItem,
             icon: const Icon(Icons.add),
           ),
         ],
