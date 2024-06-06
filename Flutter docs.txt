@@ -26,6 +26,7 @@ used to allocate value once in the memory to optimize the application (no need t
 code format:
 >format
 
+AIzaSyCrtF5iTcXuf0emouyBcQV8Y6R73OAy1Ck
 
 
 Flutter Docs:
