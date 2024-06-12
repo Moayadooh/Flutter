@@ -26,7 +26,8 @@ used to allocate value once in the memory to optimize the application (no need t
 code format:
 >format
 
-AIzaSyCrtF5iTcXuf0emouyBcQV8Y6R73OAy1Ck
+Adding Your Own Native Code:
+https://docs.flutter.dev/platform-integration/platform-channels
 
 
 Flutter Docs:
