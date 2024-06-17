@@ -30,7 +30,7 @@ class _AuthScreenState extends State<AuthScreen> {
   void _submit() async {
     final isValid = _form.currentState!.validate();
 
-    if (!isValid || _isLogin && _selectedImage == null) return;
+    if (!isValid || !_isLogin && _selectedImage == null) return;
 
     _form.currentState!.save();
 
@@ -144,8 +144,8 @@ class _AuthScreenState extends State<AuthScreen> {
                                 }
                                 return null;
                               },
-                              onSaved: (vale) {
-                                _enteredUsername = vale!;
+                              onSaved: (value) {
+                                _enteredUsername = value!;
                               },
                             ),
                           TextFormField(
