@@ -16,6 +16,10 @@ flutter build web --release
 flutter build appbundle --release
 appbundle --> used for publish android app only
 
+flutter clean
+flutter packages get
+flutter configure (For using firebase)
+
 
 run emulator: (VS Code)
 >flutter: launch emulator
