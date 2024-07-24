@@ -17,6 +17,12 @@ flutter build appbundle --release
 appbundle --> used for publish android app only
 
 flutter clean
+flutter run
+
+flutter pub outdated
+flutter pub upgrade
+flutter pub upgrade --major-versions
+
 flutter packages get
 flutter configure (For using firebase)
 

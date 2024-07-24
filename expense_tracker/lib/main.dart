@@ -39,7 +39,6 @@ void main() {
       ),
       //Light mode
       theme: ThemeData().copyWith(
-        useMaterial3: true,
         //scaffoldBackgroundColor: Colors.red,
         colorScheme: kColorScheme,
         appBarTheme: const AppBarTheme().copyWith(
