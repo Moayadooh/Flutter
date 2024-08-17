@@ -14,7 +14,7 @@ flutter build windows --release
 flutter build web --release
 
 flutter build appbundle --release
-appbundle --> used for publish android app only
+appbundle --> used to publish android app only
 
 flutter clean
 flutter run
