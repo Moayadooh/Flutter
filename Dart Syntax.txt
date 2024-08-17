@@ -1,4 +1,7 @@
 
+const key word:
+used to allocate value once in the memory to optimize the application (no need to each time allocate the value)
+
 private class or private data type start with "_"
 
 'widget' is a key word to access properties of the extended class. It is an instance of that class.

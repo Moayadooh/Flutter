@@ -30,9 +30,6 @@ flutter configure (For using firebase)
 run emulator: (VS Code)
 >flutter: launch emulator
 
-const key word:
-used to allocate value once in the memory to optimize the application (no need to each time allocate the value)
-
 code format:
 >format
 
