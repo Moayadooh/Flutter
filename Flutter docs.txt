@@ -17,6 +17,7 @@ flutter build appbundle --release
 appbundle --> used to publish android app only
 
 flutter clean
+flutter pub get
 flutter run
 
 flutter pub outdated
