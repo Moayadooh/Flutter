@@ -20,6 +20,7 @@ flutter clean
 flutter pub get
 flutter run
 
+flutter upgrade
 flutter pub outdated
 flutter pub upgrade
 flutter pub upgrade --major-versions
