@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:shopping_cart/models/product.dart';
-import 'package:shopping_cart/product_list.dart';
+import 'package:practise_7/models/product.dart';
+import 'package:practise_7/product_list.dart';
 
 void main() {
   runApp(
