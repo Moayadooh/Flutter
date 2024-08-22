@@ -16,6 +16,8 @@ flutter build web --release
 flutter build appbundle --release
 appbundle --> used to publish android app only
 
+dart pub get
+
 flutter clean
 flutter pub get
 flutter run
