@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:shopping_cart/models/mobile.dart';
+import 'package:practise_6/models/mobile.dart';
 
 typedef AddMobileCallback = Function();
 
