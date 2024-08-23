@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_layout_demo/widgets/button_section.dart';
 import 'package:flutter_layout_demo/widgets/title_section.dart';
 
 void main() => runApp(const MyApp());
@@ -21,7 +22,8 @@ class MyApp extends StatelessWidget {
               TitleSection(
                 name: 'Oeschinen Lake Campground',
                 location: 'Kandersteg, Switzerland',
-              )
+              ),
+              ButtonSection(),
             ],
           ),
         ),
@@ -30,5 +32,5 @@ class MyApp extends StatelessWidget {
   }
 }
 
-//https://docs.flutter.dev/ui/layout/tutorial#add-the-button-section
+//https://docs.flutter.dev/ui/layout/tutorial#add-the-text-section
 //https://docs.flutter.dev/ui/layout
