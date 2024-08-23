@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_layout_demo/widgets/button_with_text.dart';
+import 'package:flutter_layout_demo/button_with_text.dart';
 
 class ButtonSection extends StatelessWidget {
   const ButtonSection({super.key});
